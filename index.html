@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Search about your city weaher in arabic">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+  <!-- css files -->
+  <!-- font awesome -->
+  <link rel="stylesheet" href="css/all.min.css">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- main file css -->
+  <link rel="stylesheet" href="css/main.css">
+  <title>weather app</title>
+</head>
+
+<body data-bs-theme="dark" >
+  <nav class="navbar navbar-expand-lg bg-dark p-4 " dir="rtl">
+    <div class="container ">
+      <a class="navbar-brand d-flex gap-2 align-items-center me-2" href="#">
+        <img class="logo" src="imgs/logo.png" alt="logo wether">
+        <article class="">
+          <p class="mb-1 fw-bold">الطقس </p>
+          <p class="mb-0 ">حالة الطقس اليوية</p>
+        </article>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars "></i>
+      </button>
+      <div class="collapse navbar-collapse mt-3 mt-lg-0" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0  gap-lg-3 ">
+          <li class="nav-item text-capitalize   text-center ">
+            <a class="nav-link active w-100" aria-current="page" href="#">الرئيسية</a>
+          </li>
+          <li class="nav-item text-capitalize  text-center">
+            <a class="nav-link w-100" href="#">الاخبار</a>
+          </li>
+          <li class="nav-item text-capitalize   text-center">
+            <a class="nav-link" href="#">صور مباشرة</a>
+          </li>
+          <li class="nav-item text-capitalize  text-center">
+            <a class="nav-link w-100" href="#">الصور</a>
+          </li>
+          <li class="nav-item text-capitalize   text-center">
+            <a class="nav-link w-100" href="#">تواصل</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main class="p-4 " >
+    <div class="container">
+      <form class="search w-100  d-flex flex-row-reverse  gap-2" >
+        <input id="search" type="search" dir="rtl" class="flex-grow-1 rounded-2 bg-scolor border-0 p-3" placeholder="اكتب اسم المدينة" aria-label="city location">
+      </form>
+      <article class="row row-cols-1 row-cols-lg-3 py-5 g-4  flex-row-reverse" >
+        <div class="col">
+          <article class="today bg-scolor rounded-2 text-capitalize">
+            <p class="d-flex justify-content-between p-4 bg-body-tertiary rounded-2">
+              <span class="date-day">27 أكتوبر</span>
+              <span class="day">السبت</span>
+            </p>
+            <div class="content p-4 d-flex flex-column align-items-end gap-2" >
+              <p class="city fw-bold fs-2">القاهرة</p>
+              <p class="todayTemp display-3 fw-bold text-uppercase">18.5<sup>0</sup>c</p>
+              <img id="today-img"  src="imgs/sun.png" alt="sunny day">
+              <p class="info-day text-info">مشمس</p>
+              <div class="d-flex gap-3 justify-content-between align-items-center align-self-stretch">
+                <p>
+                  <img src="imgs/umb.png" alt="umberella">
+                  <span class="wind mt-2 d-block">25%</span>
+                </p>
+                <p class="d-flex flex-column align-items-center gap-1">
+                  <img  src="imgs/wind.png" alt="wind speed">
+                  <span class="wind-speed" class=" d-block">   18 km\h</span>
+                </p>
+                <p>
+                  <img src="imgs/pos.png" alt="direction of wind">
+                  <span class=" wind-dir mt-2 d-block">east</span>
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article  class=" bg-scolor  d-flex flex-column  text-capitalize">
+            <p class="next-today text-center p-4 bg-body-tertiary bg-opacity-50 rounded-2" > الاحد</p>
+            <div class="content d-flex align-items-center flex-column justify-content-center flex-grow-1 ">
+              <img src="imgs/sun.png" alt="info img" class=" next-img info-img mb-4">
+              <p class="next-today-max fw-bold  text-uppercase mb-0 fs-1">18.5<sup>o</sup>c</p>
+              <span class="next-today-min fw-bold text-uppercase mb-4 fs-4">18.5<sup>o</sup>c</span>
+                <p class="info-next  text-info">مشمس</p>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article  class=" bg-scolor rounded-2 text-capitalize d-flex flex-column">
+            <p class="next-today text-center bg-body-tertiary p-4 rounded-2" >الاثنين </p>
+            <div class="content p-4 d-flex align-items-center flex-column justify-content-center flex-grow-1 ">
+              <img src="imgs/sun.png" alt="info img" class="next-img mb-4">
+                <p class="next-today-max fw-bold text-uppercase mb-0 fs-1">18.5 <sup>o</sup>c</p>
+                <span class="next-today-min fw-bold degree-upper text-uppercase mb-4 fs-4">18.5 <sup>o</sup>c</span>
+                <p class="info-next text-info">مشمس</p>
+            </div>
+          </article>
+        </div>
+      </article>
+    </div>
+  </main>
+  <footer class="p-5 text-center bg-scolor">
+    <div class="container">
+      <p class="m-0 text-capitalize"> &copy; 2024 بواسطة محمد احمد</p>
+    </div>
+  </footer>
+  <!-- bootsrap js file -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- main file -->
+  <script src="js/main.js">
+  </script>
+</body>
+
+</html>

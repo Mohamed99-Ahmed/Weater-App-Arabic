@@ -1,0 +1,130 @@
+/* start main style */
+:root{
+    --main-transition:all 1s;
+    --main-color: #0CAEDC;
+    --sec-color:#262936;
+    --tirt-color:#c4c8cb;
+}
+.bg-scolor{
+    background-color:var(--sec-color)
+}
+
+.text-mcolor{
+    color:var(--main-color)
+}
+body{
+    font-family: "Cairo", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    
+}
+html,
+body{
+    scroll-behavior: smooth ;
+  
+}
+a{
+    color:inherit !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: "Montserrat", sans-serif;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+img{
+    width:100%;
+    display:block;
+}
+/* .text-mcolor{
+    color:var(--main-color);
+}
+.text-scolor{
+    color:var(--sec-color)
+}
+.bg-mcolor{
+    background-color: var(--main-color);
+}
+.bg-gray{
+    background-color:var(--tert-color) ;
+} */
+section{
+    padding-block: 6em;;
+}
+/* End main rules */
+/* start header */
+.navbar-brand img{
+    height: 30px;
+}
+.navbar-brand article{
+    font-size:0.8rem;
+}
+ .navbar-toggler:focus,
+ .navbar-toggler:hover{
+    box-shadow: none ;
+    color:var(--main-color);
+    border-radius: 50%;
+    border:1px solid var(--main-color) !important;
+    padding:10px;
+}
+.navbar-nav .nav-link.active{
+    color:var(--main-color) !important;
+    border:1px solid var(--main-color);
+        border-radius:5px ;
+}
+
+@media screen and  (max-width:992px){
+    nav ul{
+        background-color: var(--sec-color) !important;
+        border-radius: 15px;       
+    }
+    nav ul li{
+        padding-block: 0.5rem;
+    }
+    nav ul li:not(:last-child){
+        border-bottom:1px solid var(--tirt-color) !important;
+
+    }
+    .navbar-nav .nav-link.active{
+        border:none;
+    }
+}
+/* End header */
+/* start main section */
+main img{
+    width: 50px;
+}
+main div.col.active{
+    animation: move 2s linear;
+
+}
+@keyframes move {
+    0%{
+        opacity:0.5;
+        transform:translateY(-15px)
+    }
+    100%{
+        transform:1;
+        transform:translateY(0px)
+    }
+}
+main{
+    background-image: url(../imgs/banner\ \(1\).png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+main form input[type="search"]:focus{
+    outline:2px solid var(--main-color);
+    /* outline: none; */
+}
+main .row article{
+    height:100%;    
+}
+main article .today p img{
+    width:30px;
+}
+/* End main section*/
